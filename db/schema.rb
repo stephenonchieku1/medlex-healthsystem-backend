@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_03_26_000003) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_26_200918) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -20,12 +20,12 @@ ActiveRecord::Schema[8.0].define(version: 2024_03_26_000003) do
     t.date "date_of_birth", null: false
     t.string "gender", null: false
     t.text "address"
-    t.string "phone_number", null: false
+    t.string "contact_number", null: false
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["contact_number"], name: "index_clients_on_contact_number", unique: true
     t.index ["email"], name: "index_clients_on_email", unique: true
-    t.index ["phone_number"], name: "index_clients_on_phone_number", unique: true
   end
 
   create_table "enrollments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|

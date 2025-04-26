@@ -10,30 +10,30 @@ A Rails API for managing health programs, clients, and program enrollments.
 - Search for clients
 - View client profiles and program enrollments
 
-## API Endpoints
+## API Endpoints (v1)
 
 ### Health Programs
 
-- `GET /api/health_programs` - List all programs
-- `GET /api/health_programs/:id` - Get program details
-- `POST /api/health_programs` - Create new program
-- `PUT /api/health_programs/:id` - Update program
-- `DELETE /api/health_programs/:id` - Delete program
+- `GET /api/v1/health_programs` - List all programs
+- `GET /api/v1/health_programs/:id` - Get program details
+- `POST /api/v1/health_programs` - Create new program
+- `PUT /api/v1/health_programs/:id` - Update program
+- `DELETE /api/v1/health_programs/:id` - Delete program
 
 ### Clients
 
-- `GET /api/clients` - List all clients
-- `GET /api/clients/:id` - Get client details
-- `POST /api/clients` - Register new client
-- `PUT /api/clients/:id` - Update client
-- `GET /api/clients/search?q=:query` - Search clients
-- `GET /api/clients/:id/enrollments` - Get client's program enrollments
+- `GET /api/v1/clients` - List all clients
+- `GET /api/v1/clients/:id` - Get client details
+- `POST /api/v1/clients` - Register new client
+- `PUT /api/v1/clients/:id` - Update client
+- `GET /api/v1/clients/search?q=:query` - Search clients
+- `GET /api/v1/clients/:id/enrollments` - Get client's program enrollments
 
 ### Enrollments
 
-- `POST /api/enrollments` - Enroll client in program
-- `PUT /api/enrollments/:id` - Update enrollment status
-- `GET /api/enrollments/:id` - Get enrollment details
+- `POST /api/v1/enrollments` - Enroll client in program
+- `PUT /api/v1/enrollments/:id` - Update enrollment status
+- `GET /api/v1/enrollments/:id` - Get enrollment details
 
 ## Setup
 

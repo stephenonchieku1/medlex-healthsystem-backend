@@ -7,4 +7,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  namespace :api do
+    resources :health_programs, only: [:index, :show, :create, :update, :destroy]
+    
+    resources :clients, only: [:index, :show, :create, :update] do
+      collection do
+        get :search
+      end
+      resources :enrollments, only: [:index]
+    end
+    
+    resources :enrollments, only: [:create, :show, :update]
+  end
 end
